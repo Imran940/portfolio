@@ -1,4 +1,6 @@
 import Footer from "./Components/Footer";
+import "./App.css";
+import About from "./Components/About";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
@@ -19,6 +21,8 @@ function App() {
         <Projects />
       </section>
       <Footer />
+      <spans className="w-full top-0 h-[300px] flex bg-black/10"></spans>
+      <About />
     </div>
   );
 }
