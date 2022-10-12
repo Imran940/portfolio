@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .liItem{
+      @apply cursor-pointer;
+    }
+    .liItem:hover{
+        @apply border-b-2 border-b-white;
+    }
+    .liItem:focus-within{
+        @apply border-b-2 border-b-white;
+    }
+}
