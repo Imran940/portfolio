@@ -7,7 +7,7 @@
       @apply cursor-pointer;
     }
     .liItem:hover{
-        @apply border-b-2 border-b-white;
+        @apply  border-b-2 border-b-white;
     }
     .liItem:focus-within{
         @apply border-b-2 border-b-white;
