@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { GrProjects } from "react-icons/gr";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
@@ -27,18 +27,26 @@ const Header = () => {
   useOutsideAlerter(navigationRef, () => setActive(false));
   const Links = (
     <>
-      <Link className="liItem" to="#home">
-        Home
-      </Link>
-      <Link className="liItem" to="#projects">
-        Projects
-      </Link>
-      <Link className="liItem" to="#skills">
-        Skills
-      </Link>
-      <Link className="liItem" to="#aboutUs">
-        About Us
-      </Link>
+      <li>
+        <Link className="liItem" to="#home" smooth>
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link className="liItem" to="#projects" smooth>
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link className="liItem" to="#skills" smooth>
+          Skills
+        </Link>
+      </li>
+      <li>
+        <Link className="liItem" to="#aboutUs" smooth>
+          About Us
+        </Link>
+      </li>
     </>
   );
   const MenuItems = (
@@ -60,7 +68,7 @@ const Header = () => {
   );
 
   return (
-    <div className="sticky top-0 h-[8%] text-white font-normal text-[20px] py-4 px-2 max-w-7xl mx-auto flex justify-between">
+    <div className="sticky top-0 h-[10%] text-white font-normal text-[20px] py-4 px-2 max-w-7xl mx-auto flex items-center justify-between bg-[#0F1624]">
       <div className="font-mono cursor-pointer items-center gap-2 flex">
         <GrProjects className="bg-white" />
         <span>Portfolio</span>
