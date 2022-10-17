@@ -21,34 +21,36 @@ function useOutsideAlerter(ref, callback) {
     };
   }, [ref]);
 }
+export const Links = (
+  <>
+    <li>
+      <Link className="liItem" to="#home" smooth>
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link className="liItem" to="#projects" smooth>
+        Projects
+      </Link>
+    </li>
+    <li>
+      <Link className="liItem" to="#skills" smooth>
+        Skills
+      </Link>
+    </li>
+    <li>
+      <Link className="liItem" to="#aboutUs" smooth>
+        About Us
+      </Link>
+    </li>
+  </>
+);
+
 const Header = () => {
   const [active, setActive] = useState(false);
   const navigationRef = useRef(null);
   useOutsideAlerter(navigationRef, () => setActive(false));
-  const Links = (
-    <>
-      <li>
-        <Link className="liItem" to="#home" smooth>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link className="liItem" to="#projects" smooth>
-          Projects
-        </Link>
-      </li>
-      <li>
-        <Link className="liItem" to="#skills" smooth>
-          Skills
-        </Link>
-      </li>
-      <li>
-        <Link className="liItem" to="#aboutUs" smooth>
-          About Us
-        </Link>
-      </li>
-    </>
-  );
+
   const MenuItems = (
     <div
       ref={navigationRef}
