@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import { Links } from "./Header";
 function Footer() {
   return (
-    <div className="w-full h-fit bg-black/25 py-4">
+    <div className="w-full h-fit bg-black py-4">
       <div className="w-full flex justify-center items-center gap-2">
         <GrProjects className="bg-white text-xl" />
         <span className="font-mono text-lg sm:text-2xl">Portfolio</span>
@@ -25,7 +25,7 @@ function Footer() {
       </div>
       <div className="w-full flex justify-center mt-4">
         <ul className="items-center font-sans justify-between w-[40%] flex text-[10px] sm:text-xl">
-          {Links}
+          {Links()}
         </ul>
       </div>
       <div className="w-full flex justify-center gap-4">

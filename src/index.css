@@ -2,14 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .liItem{
-      @apply cursor-pointer;
-    }
-    .liItem:hover{
-        @apply  border-b-2 border-b-white;
-    }
-    .liItem:focus-within{
-        @apply border-b-2 border-b-white;
-    }
+@layer components {
+  .liItem {
+    @apply cursor-pointer text-white;
+  }
+  .liItem:hover {
+    @apply border-b-2 border-b-white;
+  }
+  .liItem:focus-within {
+    @apply border-b-2 border-b-white;
+  }
 }
+
+::-webkit-scrollbar {
+  background: #9595b7;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid rgb(247, 184, 76);
+    background-clip: content-box;
+    background-color: rgb(247, 184, 76);
+  }

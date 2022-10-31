@@ -3,8 +3,8 @@ import { GiWorld } from "react-icons/gi";
 import Typewriter from "typewriter-effect";
 function Home() {
   return (
-    <div className="w-full h-full flex flex-col-reverse items-center justify-between sm:flex-row">
-      <div className="flex flex-col gap-5 sm:text-left">
+    <div className="w-full h-full flex flex-col-reverse items-center justify-center sm:flex-row sm:justify-between">
+      <div className="flex flex-col gap-5 sm:text-left sm:w-[40%]">
         <div className="flex  flex-col gap-2 font-bold">
           <span className="text-5xl flex justify-center gap-3 sm:text-6xl sm:justify-start">
             <span>Hello World </span>
@@ -23,8 +23,8 @@ function Home() {
         </div>
 
         <span className="text-[#BCBCBC] text-center  sm:w-3/4 sm:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We are here to convert your ideas into a website, please help us to
+          help you
         </span>
       </div>
       <div>

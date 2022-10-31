@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { GrProjects } from "react-icons/gr";
-import { MdOutlineDarkMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { Switch } from "antd";
 
 function useOutsideAlerter(ref, callback) {
   useEffect(() => {
@@ -21,24 +22,24 @@ function useOutsideAlerter(ref, callback) {
     };
   }, [ref]);
 }
-export const Links = (
+export const Links = (setActive) => (
   <>
-    <li>
+    <li onClick={() => setActive && setActive(false)}>
       <Link className="liItem" to="#home" smooth>
         Home
       </Link>
     </li>
-    <li>
+    <li onClick={() => setActive && setActive(false)}>
       <Link className="liItem" to="#projects" smooth>
         Projects
       </Link>
     </li>
-    <li>
+    <li onClick={() => setActive && setActive(false)}>
       <Link className="liItem" to="#skills" smooth>
         Skills
       </Link>
     </li>
-    <li>
+    <li onClick={() => setActive && setActive(false)}>
       <Link className="liItem" to="#aboutUs" smooth>
         About Us
       </Link>
@@ -54,47 +55,50 @@ const Header = () => {
   const MenuItems = (
     <div
       ref={navigationRef}
-      className="fixed left-0 top-0 w-1/2 h-full  bg-black/10 z-10 sm:hidden"
+      className="fixed left-0 top-0 w-1/2 h-full bg-[#0F1624] z-10 sm:hidden"
     >
+      <div className="w-full font-mono cursor-pointer h-[10%] items-center justify-center gap-2 flex">
+        <GrProjects className="bg-white" />
+        <span>Portfolio</span>
+      </div>
       <ul
         className={
-          "text-white flex-col flex items-center p-7 gap-7 w-full h-full mt-10"
+          "text-white flex-col flex items-center p-7 gap-7 w-full h-full"
         }
       >
-        {Links}
-        <li>
-          <FiSun size={25} />
-        </li>
+        {Links(setActive)}
       </ul>
     </div>
   );
 
   return (
-    <div className="sticky top-0 h-[10%] text-white font-normal text-[20px] py-4 px-2 max-w-7xl mx-auto flex items-center justify-between bg-[#0F1624]">
+    <div className="fixed z-10 w-full top-0  text-white font-normal text-[20px] py-4 px-2 flex items-center justify-between bg-[#0F1624] sm:px-5">
       <div className="font-mono cursor-pointer items-center gap-2 flex">
         <GrProjects className="bg-white" />
         <span>Portfolio</span>
       </div>
-
-      <ul className="hidden text-center font-sans justify-between w-[60%] sm:flex">
-        {Links}
+      <ul className="hidden text-center font-sans items-center mb-0 justify-between w-[60%] sm:flex">
+        {Links(setActive)}
       </ul>
-
       {active && MenuItems}
-      {active ? (
-        <AiOutlineMenuFold
-          className="sm:hidden"
-          onClick={() => setActive(!active)}
+
+      <div className="justify-between items-center gap-5 flex ">
+        <Switch
+          checkedChildren={<MdDarkMode size={20} />}
+          unCheckedChildren={<FiSun color="yellow" size={20} />}
+          defaultChecked
         />
-      ) : (
-        <AiOutlineMenuUnfold
-          className="sm:hidden"
-          onClick={() => setActive(!active)}
-        />
-      )}
-      <div className="hidden w-[5%] justify-between items-center sm:flex ">
-        <MdOutlineDarkMode size={25} />
-        <FiSun size={25} />
+        {active ? (
+          <AiOutlineMenuFold
+            className="sm:hidden"
+            onClick={() => setActive(!active)}
+          />
+        ) : (
+          <AiOutlineMenuUnfold
+            className="sm:hidden"
+            onClick={() => setActive(!active)}
+          />
+        )}
       </div>
     </div>
   );
