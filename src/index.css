@@ -26,3 +26,7 @@
     background-clip: content-box;
     background-color: rgb(247, 184, 76);
   }
+
+.ant-progress-outer{
+  padding: 0 !important;
+}

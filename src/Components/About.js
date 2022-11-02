@@ -31,18 +31,15 @@ function About() {
           Contact Us
         </p>
       </div>
-      <div className="w-full grid grid-cols-2 gap-8 mt-10">
-        <div></div>
-      </div>
       <div className="w-full sm:grid grid-cols-2 gap-8 px-4">
-        <div>
-          <form action="" className="flex flex-col max-w-[600px] w-full">
+        <div className="mt-10">
+          <form className="flex flex-col max-w-[600px] w-full">
             <p>
               Submit the query below or shoot me an email at
-              <i> immoshaikh91@gmail.com</i>
+              <i> borntostruggle12@gmail.com</i>
             </p>
             <input
-              className="bg-[#ccd6f6] rounded-lg mt-5 px-2 text-black/95 p-2 font-serif"
+              className="bg-[#ccd6f6] rounded-lg mt-2 px-2 text-black/95 p-2 font-serif"
               type="text"
               placeholder="Name"
               name="name"

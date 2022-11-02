@@ -17,8 +17,8 @@ export default {
       },
     },
     {
-      name: "video_url",
-      title: "Video Url",
+      name: "video_id",
+      title: "Video ID",
       type: "string",
     },
     {

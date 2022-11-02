@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import "antd/dist/antd.css";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
