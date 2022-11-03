@@ -30,3 +30,7 @@
 .ant-progress-outer{
   padding: 0 !important;
 }
+input,textarea{
+  border: none;
+  outline: none;
+}
