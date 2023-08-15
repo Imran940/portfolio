@@ -13,7 +13,6 @@ function Skills() {
     }`
       )
       .then((data) => {
-        console.log(data);
         setSkills(data);
       })
       .catch(console.error);
@@ -32,7 +31,7 @@ function Skills() {
       <span className="pb-1 text-3xl sm:text-5xl font-bold inline border-b-4 border-pink-600">
         Skills
       </span>
-      <div className="w-full flex flex-col gap-5 md:gap-10 justify-center  md:w-1/2">
+      <div className="w-full grid gap-5 grid-cols-1 md:gap-10 justify-center  md:grid-cols-2">
         {skills.map((s) => (
           <div>
             <div className="my-1 flex justify-between">

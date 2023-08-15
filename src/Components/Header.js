@@ -82,12 +82,12 @@ const Header = () => {
       </ul>
       {active && MenuItems}
 
-      <div className="justify-between items-center gap-5 flex ">
-        <Switch
+      <div className="justify-between items-center gap-5 flex md:hidden">
+        {/* <Switch
           checkedChildren={<MdDarkMode size={20} />}
           unCheckedChildren={<FiSun color="yellow" size={20} />}
           defaultChecked
-        />
+        /> */}
         {active ? (
           <AiOutlineMenuFold
             className="sm:hidden"

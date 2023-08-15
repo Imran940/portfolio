@@ -9,6 +9,7 @@ import {
   siteColor,
 } from "./constants";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
 function About() {
   const [userInputs, setUserInputs] = useState({
     name: "",
@@ -17,6 +18,7 @@ function About() {
   });
   const [loading, setLoading] = useState(false);
   const { name, email, message } = userInputs;
+  const currentYear = new Date().getFullYear();
 
   const handleFormSubmit = async (e) => {
     try {
@@ -40,30 +42,47 @@ function About() {
   return (
     <div className="max-w-7xl h-fit mx-auto px-2 py-20 flex flex-col text-center md:text-left justify-center items-center ">
       <div className="text-3xl sm:text-5xl font-bold inline border-b-4 border-pink-600">
-        About Us
+        About Me
       </div>
 
-      <div className="mt-5 w-full sm:grid grid-cols-2 gap-8 px-4">
-        <div>
-          <p className="text-3xl font-bold ">
-            Hello, How can we help you. Please take a look around.
+      <div className="mt-8 w-full flex md:flex-row md:justify-between flex-col-reverse gap-8 px-4">
+        <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2">
+            <p className="text-4xl font-bold mb-0">
+              Hello 👋, Imran Shaikh Here{" "}
+            </p>
+            <div className="flex flex-col md:flex-row">
+              <span className="text-xl">Senior Web Developer 🧑‍💻</span>
+              <span className="text-xl">
+                ( {currentYear - 2020} years Experience )
+              </span>
+            </div>
+          </div>
+
+          <p className="md:w-3/4 w-full">
+            I'm a senior web developer is an experienced professional who
+            possesses a high level of expertise in designing, developing, and
+            maintaining web applications, websites, and other online solutions.
+            I typically have a deep understanding of various web technologies,
+            programming languages, and best practices. I have been working in
+            web development from {currentYear - 2020}+ years and completed every
+            project as per the client's requirements on time.
           </p>
         </div>
-        <div>
-          <p className="pt-5 sm:pt-0">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A est,
-            doloribus voluptatum inventore adipisci harum repudiandae incidunt
-            dolorum pariatur possimus nihil consequatur deleniti accusantium,
-            quo quisquam totam at enim repellat.
-          </p>
+        <div className="flex flex-col justify-center items-center">
+          <img
+            src="/images/Profile.jpg"
+            className="w-3/4 md:w-full object-contain rounded-full"
+          />
+          <div></div>
         </div>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-16">
         <p
           className={`text-3xl sm:text-4xl font-bold inline border-b-4 border-pink-600 `}
         >
-          Contact Us
+          Contact Me
         </p>
       </div>
       <div className="w-full sm:grid grid-cols-2 gap-8 px-4">
@@ -75,7 +94,7 @@ function About() {
           >
             <p>
               Submit the query below or shoot me an email at
-              <i> borntostruggle12@gmail.com</i>
+              <i> coddershaikh@gmail.com</i>
             </p>
             <input
               className="bg-[#ccd6f6] rounded-lg mt-2 px-2 text-black/95 p-2  ring-yellow-600 focus:ring capitalize text-lg"
@@ -133,7 +152,7 @@ function About() {
           </form>
         </div>
         <div className="flex flex-col justify-between items-center h-[20%]  sm:mt-20 ">
-          <p className="pt-5 text-2xl sm:pt-0">Our Social Handles</p>
+          <p className="pt-5 text-2xl sm:pt-0">My Social Handles</p>
           <div className="text-2xl flex gap-5 w-[30%]">
             <ImLinkedin
               className="cursor-pointer"

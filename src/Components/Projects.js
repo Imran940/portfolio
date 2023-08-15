@@ -27,7 +27,6 @@ function Projects() {
     }`
       )
       .then((data) => {
-        console.log(data);
         setProjects(data);
       })
       .catch(console.error);
@@ -37,8 +36,8 @@ function Projects() {
       <span className="pb-1 text-3xl sm:text-5xl font-bold inline border-b-4 border-pink-600">
         Projects
       </span>
-      <div className="relative w-full h-[85%]">
-        {projects.length > 1 && (
+      <div className="relative w-full h-[88%]">
+        {projects.length > 2 && (
           <AiFillCaretLeft
             onClick={() => scroll(-500)}
             className="hidden absolute justify-center items-center z-10 cursor-pointer top-[50%]  md:flex  md:left-[-5px] bg-gray-600 rounded-md "
@@ -47,7 +46,7 @@ function Projects() {
         )}
         <div
           ref={ref}
-          className="w-full justify-center overflow-y-hidden h-full flex gap-5 overflow-x-auto snap-x snap-mandatory"
+          className="max-w-full  overflow-y-hidden h-full flex gap-5 overflow-x-auto snap-x snap-mandatory"
         >
           {projects.map((p) => (
             <ProjectCard
@@ -62,7 +61,7 @@ function Projects() {
           ))}
         </div>
 
-        {projects.length > 1 && (
+        {projects.length > 2 && (
           <AiFillCaretRight
             onClick={() => scroll(500)}
             className="absolute z-10 cursor-pointer top-[50%] hidden md:block md:right-[-5px] bg-gray-600 rounded-md"

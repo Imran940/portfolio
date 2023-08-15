@@ -23,8 +23,8 @@ function Home() {
         </div>
 
         <span className="text-[#BCBCBC] text-center  sm:w-3/4 sm:text-left">
-          We are here to convert your ideas into a website, please help us to
-          help you
+          I'm here to convert your ideas into a website, please help me to help
+          you
         </span>
       </div>
       <div>
