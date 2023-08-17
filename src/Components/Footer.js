@@ -32,10 +32,14 @@ function Footer() {
         <div className="w-full flex flex-col items-center justify-center gap-2">
           <p className="mb-0 text-xl font-bold">Contact Informations</p>
           <div>
-            <p className="text-center text-[10px] sm:text-xl mb-2">
-              +91 9082074682
-            </p>
-            <p className="font-serif text-center text-[10px]  sm:text-xl ">
+            <a
+              href="https://join.skype.com/invite/WCOcsp9uKWhs"
+              target="_blank"
+              className="text-center text-[10px] sm:text-xl"
+            >
+              https://join.skype.com/invite/WCOcsp9uKWhs
+            </a>
+            <p className="font-serif text-center text-[10px] mt-2  sm:text-xl ">
               coddershaikh@gmail.com
             </p>
           </div>
