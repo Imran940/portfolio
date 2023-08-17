@@ -60,13 +60,11 @@ function About() {
           </div>
 
           <p className="md:w-3/4 w-full">
-            I'm a senior web developer is an experienced professional who
-            possesses a high level of expertise in designing, developing, and
-            maintaining web applications, websites, and other online solutions.
-            I typically have a deep understanding of various web technologies,
-            programming languages, and best practices. I have been working in
-            web development from {currentYear - 2020}+ years and completed every
-            project as per the client's requirements on time.
+            I'm a skilled web developer with over {currentYear - 2020}+ years of
+            dedicated experience in crafting websites and web applications. My
+            expertise lies in using various web technologies and programming
+            languages. What sets me apart is my track record of consistently
+            delivering projects on time and exactly as per the clients' needs.
           </p>
         </div>
         <div className="flex flex-col justify-center items-center">

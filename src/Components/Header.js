@@ -77,7 +77,7 @@ const Header = () => {
         <GrProjects className="bg-white" />
         <span>Portfolio</span>
       </div>
-      <ul className="hidden text-center font-sans items-center mb-0 justify-between w-[60%] sm:flex">
+      <ul className="hidden text-center font-sans items-center mb-0 justify-between w-[45%] sm:flex">
         {Links(setActive)}
       </ul>
       {active && MenuItems}

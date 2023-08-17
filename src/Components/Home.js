@@ -14,7 +14,7 @@ function Home() {
             <span>Welcome</span>
             <Typewriter
               options={{
-                strings: ["Designer", "Developer", "Coder"],
+                strings: ["Ideator", "Client", "Coder"],
                 autoStart: true,
                 loop: true,
               }}
