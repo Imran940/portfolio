@@ -46,7 +46,7 @@ function About() {
       </div>
 
       <div className="mt-8 w-full flex md:flex-row md:justify-between flex-col-reverse gap-8 px-4">
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-5 md:space-y-3">
           <div className="flex flex-col space-y-2">
             <p className="text-4xl font-bold mb-0">
               Hello 👋, Imran Shaikh Here{" "}
@@ -66,6 +66,14 @@ function About() {
             languages. What sets me apart is my track record of consistently
             delivering projects on time and exactly as per the clients' needs.
           </p>
+
+          <a
+            href="https://drive.google.com/file/d/1T9CJbLVOInB1FEupDa0vEfPCBJK8HO6o/view?usp=sharing"
+            target="_blank"
+            className="border md:w-fit p-2 rounded-sm text-white"
+          >
+            View My Resume
+          </a>
         </div>
         <div className="flex flex-col justify-center items-center">
           <img
@@ -136,17 +144,18 @@ function About() {
               }
               required
             ></textarea>
-            <button
-              className={`w-full  sm:w-[100px] rounded-md flex  justify-center items-center h-5  bg-yellow-600 p-5 mt-4`}
-              onClick={handleFormSubmit}
-              type="submit"
-            >
-              <AiOutlineLoading3Quarters
-                className={`${loading ? "animate-spin" : "hidden"} mr-2`}
-                size={25}
-              />{" "}
-              Submit
-            </button>
+            <div>
+              <button
+                className={`w-full  sm:w-[100px] rounded-md flex  justify-center items-center h-5  bg-yellow-600 p-5 mt-4`}
+                type="submit"
+              >
+                <AiOutlineLoading3Quarters
+                  className={`${loading ? "animate-spin" : "hidden"} mr-2`}
+                  size={25}
+                />{" "}
+                Submit
+              </button>
+            </div>
           </form>
         </div>
         <div className="flex flex-col justify-between items-center h-[20%]  sm:mt-20 ">

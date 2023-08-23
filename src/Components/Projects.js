@@ -11,8 +11,6 @@ function Projects() {
   const ref = useRef(null);
   const [projects, setProjects] = useState([]);
   const scroll = (scrollOffset) => {
-    console.log(scrollOffset);
-    console.log(ref.current);
     ref.current.scrollTo({
       left: ref.current.scrollLeft + scrollOffset,
       behavior: "smooth",
@@ -42,6 +40,7 @@ function Projects() {
             onClick={() => scroll(-500)}
             className="hidden absolute justify-center items-center z-10 cursor-pointer top-[50%]  md:flex  md:left-[-5px] bg-gray-600 rounded-md "
             size={40}
+            //aria-disabled
           />
         )}
         <div
